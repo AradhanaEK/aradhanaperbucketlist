@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aradhana's Indian-Themed Bucket List</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Google Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tangerine:wght@700&display=swap');
+
+        /* Body Styles */
+        body {
+            background-color: #FFF5E6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: 
+                linear-gradient(to right, rgba(255,215,0,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,215,0,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #FF9933;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #FF9933, #FFFFFF, #138808, #FFFFFF, #FF9933);
+        }
+
+        h1 {
+            font-family: 'Tangerine', cursive;
+            font-size: 4rem;
+            color: #8B0000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #138808;
+            font-weight: 500;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Category Sections */
+        .category {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+        }
+
+        .travel {
+            border-left-color: #138808;
+        }
+
+        .skills {
+            border-left-color: #FF9933;
+        }
+
+        .life-goals {
+            border-left-color: #8B0000;
+        }
+
+        .culture {
+            border-left-color: #800080;
+        }
+
+        h2 {
+            font-family: 'Tangerine', cursive;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "✦";
+            margin-right: 10px;
+            color: inherit;
+        }
+
+        /* Bucket List Items */
+        .bucket-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .item {
+            background-color: #FFF9F0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            border: 1px solid #FFE0B2;
+            position: relative;
+        }
+
+        .item:hover {
+            background-color: #FFEBCD;
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .item::before {
+            content: "🪷";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .completed {
+            background-color: #F0FFF0;
+            border-color: #98FB98;
+        }
+
+        .completed::before {
+            content: "✔️";
+        }
+
+        .priority {
+            background-color: #FFF0F5;
+            border-color: #FFB6C1;
+        }
+
+        .priority::before {
+            content: "⭐";
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .bucket-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .category {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+
+        /* Decorative Elements */
+        .decoration {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .diya {
+            bottom: 10px;
+            right: 20px;
+            content: "🪔";
+        }
+
+        .lotus {
+            top: 20px;
+            left: 30px;
+            content: "🪷";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aradhana's Bucket List</h1>
+            <p class="subtitle">An Indian-inspired journey of dreams and aspirations</p>
+            <div class="decoration diya">🪔</div>
+            <div class="decoration lotus">🪷</div>
+        </header>
+
+        <main>
+            <section class="category travel">
+                <h2>Travel Adventures</h2>
+                <div class="bucket-list">
+                    <div class="item completed">
+                        Visit the Taj Mahal at sunrise
+                    </div>
+                    <div class="item priority">
+                        Take a houseboat stay in Kerala backwaters
+                    </div>
+                    <div class="item">
+                        Attend Kumbh Mela festival
+                    </div>
+                    <div class="item">
+                        Trek to Hemkund Sahib in the Himalayas
+                    </div>
+                    <div class="item">
+                        Experience a traditional Kathakali performance in Kerala
+                    </div>
+                    <div class="item">
+                        Ride the toy train to Darjeeling
+                    </div>
+                </div>
+            </section>
+
+            <section class="category skills">
+                <h2>Skills to Master</h2>
+                <div class="bucket-list">
+                    <div class="item completed">
+                        Learn to make perfect chai
+                    </div>
+                    <div class="item priority">
+                        Master the art of rangoli
+                    </div>
+                    <div class="item">
+                        Learn classical Indian dance (Bharatanatyam)
+                    </div>
+                    <div class="item">
+                        Become fluent in Sanskrit shlokas
+                    </div>
+                    <div class="item">
+                        Learn to play the sitar
+                    </div>
+                    <div class="item">
+                        Master the art of Indian cooking (50 dishes)
+                    </div>
+                </div>
+            </section>
+
+            <section class="category life-goals">
+                <h2>Life Goals</h2>
+                <div class="bucket-list">
+                    <div class="item">
+                        Establish a charity for girls' education
+                    </div>
+                    <div class="item priority">
+                        Write a book about Indian folklore
+                    </div>
+                    <div class="item">
+                        Plant 1000 trees across India
+                    </div>
+                    <div class="item completed">
+                        Host a Diwali celebration for 100+ people
+                    </div>
+                    <div class="item">
+                        Learn from a spiritual guru in the Himalayas
+                    </div>
+                    <div class="item">
+                        Preserve a dying Indian art form
+                    </div>
+                </div>
+            </section>
+
+            <section class="category culture">
+                <h2>Cultural Experiences</h2>
+                <div class="bucket-list">
+                    <div class="item">
+                        Attend all major Indian festivals in their place of origin
+                    </div>
+                    <div class="item">
+                        Read all major Indian epics (Mahabharata, Ramayana, etc.)
+                    </div>
+                    <div class="item priority">
+                        Wear traditional attire from each Indian state
+                    </div>
+                    <div class="item">
+                        Learn about every Indian state's unique art forms
+                    </div>
+                    <div class="item completed">
+                        Participate in a Garba dance during Navratri
+                    </div>
+                    <div class="item">
+                        Experience a traditional Ayurvedic panchakarma
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>जीवन एक उत्सव है - Life is a celebration!</p>
+            <p>Created with ❤️ by Aradhana</p>
+        </footer>
+    </div>
+</body>
+</html>
