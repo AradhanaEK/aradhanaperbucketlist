@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+        /* Simple CSS Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff5f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #9c27b0;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #ff5722;
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, #ff9800, #9c27b0);
+            margin: 15px auto;
+            width: 80%;
+        }
+
+        .details {
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #9c27b0;
+        }
+
+        .description {
+            font-style: italic;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        .rsvp-btn {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .rsvp-btn:hover {
+            background-color: #e64a19;
+        }
+
+        .decoration {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #ff9800;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Simple animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .card {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .details {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>You're Invited!</h1>
+        
+        <div class="decoration">❤️ ✨ ❤️</div>
+        
+        <div class="card">
+            <h2>Wedding Celebration</h2>
+            <div class="divider"></div>
+            
+            <p class="details">
+                <span class="highlight">Raj & Sarah</span><br>
+                request the honor of your presence<br>
+                as they unite in marriage
+            </p>
+            
+            <div class="divider"></div>
+            
+            <h2>Event Details</h2>
+            
+            <p class="details">
+                <strong>Date:</strong> Saturday, November 16, 2024<br>
+                <strong>Time:</strong> 3:00 PM onwards<br>
+                <strong>Venue:</strong> Grace Banquet Hall, Bangalore<br>
+                <strong>Reception:</strong> Following the ceremony
+            </p>
+            
+            <div class="divider"></div>
+            
+            <p class="description">
+                "Two cultures, one love<br>
+                Join us as we celebrate our union<br>
+                With blessings from above"
+            </p>
+        </div>
+        
+        <a href="#" class="rsvp-btn">RSVP Now</a>
+        
+        <div class="decoration">✨ 🎉 ✨</div>
+        
+        <footer>
+            <p>Please respond by October 30, 2024</p>
+            <p>For questions: contact@rajsarahwedding.com</p>
+        </footer>
+    </div>
+</body>
+</html>
